@@ -5,6 +5,7 @@ public class User extends Colleague{
 
     public User(Mediator m) {
         this.m = m;
+        this.m.addUsers(this);
     }
 
     @Override
@@ -14,6 +15,7 @@ public class User extends Colleague{
 
     @Override
     void receive(String msg) {
+
         System.out.println("I received "+msg);
     }
 }
